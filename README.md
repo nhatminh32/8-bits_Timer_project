@@ -10,7 +10,7 @@ The 8-bit TIMER includes the following features:
 1. Source_code
    - Include the RTL design and testbench for each module.
    - `RTL_Timer.v` and `TB_Timer.v` are this project’s top-level design and testbench.
-2. Specification
+2. Document
    - Contains the `.pdf` and `.docx` versions of the 8-bit TIMER design document.
 3. Coverage_report
    - Contains the coverage test report run on Questasim.
