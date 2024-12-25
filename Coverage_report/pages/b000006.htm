@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <!-- original name: _work.TSR_moduleContentFrame2.htm -->
+  <link rel="StyleSheet" media="print"  href="../css/ucdb2htmlP.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html_newlook.css"/>
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript" src="../scripts/showhide.js"></script>
+  
+</head>
+<body id="ucdb2html_detail" onload="showLast()">
+  <h1><span class="strip">Questa</span> Branch Coverage Report</h1>
+  <h3>Scope: /<a href="z000006.htm">work.TSR_module</a></h3>
+  <!-- use script block so buttons vanish when JavaScript is disabled -->
+  <script type="text/javascript">
+  <!--
+  document.write(
+    '<table class="buttons" cellspacing="2" cellpadding="2"><tr>' +
+       '<td id="showAll" width="100" onclick="showAll()" class="button_on" ' +
+           'title="Display all coverage scopes and bins.">Show All</td>' +
+       '<td id="showCov" width="100" onclick="showCov()" class="button_off" ' +
+           'title="Display only covered scopes and bins.">Show Covered</td>' +
+       '<td id="showMis" width="100" onclick="showMis()" class="button_off" ' +
+           'title="Display only uncovered scopes and bins.">Show Missing</td>' +
+    '</tr></table>');
+  //-->
+  </script>
+  <div class="covered"><a name="cvg316"/><hr/><table>
+  <tr l="19" lnk="__HDL_srcfile_3.htm#19" z="		if((APB_IN == 8'h00)&amp;&amp;(CL_IN == 2'b01)) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="19" lnk="__HDL_srcfile_3.htm#19" z="		if((APB_IN == 8'h00)&amp;&amp;(CL_IN == 2'b01)) begin" h="19" c="g"/>
+  <tr cr="c" t="T" l="21" lnk="__HDL_srcfile_3.htm#21" z="		end else if ((APB_IN == 8'h00)&amp;&amp;(CL_IN == 2'b10)) begin" h="6" c="g"/>
+  <tr cr="c" t="E" l="23" lnk="__HDL_srcfile_3.htm#23" z="		end else begin" h="43" c="g"/>
+  </table>
+  </div><div><a name="cvg317"/><hr/><table>
+  <tr l="28" lnk="__HDL_srcfile_3.htm#28" z="		case (out_signal)" c="Y" p="80.00"/><tr/>
+  <tr cr="c" t="T" l="29" lnk="__HDL_srcfile_3.htm#29" z="			2'b00:	TSR &lt;= 8'h00;	// Default " h="29" c="g"/>
+  <tr cr="c" t="T" l="30" lnk="__HDL_srcfile_3.htm#30" z="			2'b01:	TSR &lt;= 8'h01;	// Overflow" h="29" c="g"/>
+  <tr cr="c" t="T" l="31" lnk="__HDL_srcfile_3.htm#31" z="			2'b10:	TSR &lt;= 8'h02;	// Underflow" h="9" c="g"/>
+  <tr cr="m" t="T" l="32" lnk="__HDL_srcfile_3.htm#32" z="			2'b11:	TSR &lt;= 8'h03;	// Overflow and Underflow " h="0" c="r"/>
+  <tr cr="c" t="A" l="28" lnk="__HDL_srcfile_3.htm#28" z="		case (out_signal)" h="1" c="g"/>
+  </table>
+  </div><div><a name="cvg318"/><hr/><table>
+  <tr l="36" lnk="__HDL_srcfile_3.htm#36" z="		if((APB_IN == 8'h01) || (APB_IN == 8'h02)) begin" c="Y" p="50.00"/><tr/>
+  <tr cr="m" t="I" l="36" lnk="__HDL_srcfile_3.htm#36" z="		if((APB_IN == 8'h01) || (APB_IN == 8'h02)) begin" h="0" c="r"/>
+  <tr cr="c" t="A" l="36" lnk="__HDL_srcfile_3.htm#36" z="		if((APB_IN == 8'h01) || (APB_IN == 8'h02)) begin" h="68" c="g"/>
+  </table>
+  </div><div class="missing"><a name="cvg319"/><hr/><table>
+  <tr l="37" lnk="__HDL_srcfile_3.htm#37" z="			if(out_signal[0] == 1'b0)" c="R" p="0.00"/><tr/>
+  <tr cr="m" t="I" l="37" lnk="__HDL_srcfile_3.htm#37" z="			if(out_signal[0] == 1'b0)" h="0" c="r"/>
+  <tr cr="m" t="T" l="39" lnk="__HDL_srcfile_3.htm#39" z="			else if (out_signal[1] == 1'b0)" h="0" c="r"/>
+  <tr cr="m" t="A" l="37" lnk="__HDL_srcfile_3.htm#37" z="			if(out_signal[0] == 1'b0)" h="0" c="r"/>
+  </table>
+  </div><div class="covered"><a name="cvg320"/><hr/><table>
+  <tr l="42" lnk="__HDL_srcfile_3.htm#42" z="		if (APB_IN == 8'h03) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="42" lnk="__HDL_srcfile_3.htm#42" z="		if (APB_IN == 8'h03) begin" h="5" c="g"/>
+  <tr cr="c" t="A" l="42" lnk="__HDL_srcfile_3.htm#42" z="		if (APB_IN == 8'h03) begin" h="63" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg321"/><hr/><table>
+  <tr l="48" lnk="__HDL_srcfile_3.htm#48" z="		if(~PRESET) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="48" lnk="__HDL_srcfile_3.htm#48" z="		if(~PRESET) begin" h="20" c="g"/>
+  <tr cr="c" t="A" l="48" lnk="__HDL_srcfile_3.htm#48" z="		if(~PRESET) begin" h="48" c="g"/>
+  </table>
+  </div><script type="text/javascript" src="../scripts/buildbranchpage.js"></script>
+  <!-- make sure jumps to last few line nos work -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+</body>
+</html>

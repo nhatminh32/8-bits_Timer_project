@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <!-- original name: _work.Read_Write_Control_RTLContentFrame2.htm -->
+  <link rel="StyleSheet" media="print"  href="../css/ucdb2htmlP.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html_newlook.css"/>
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript" src="../scripts/showhide.js"></script>
+  
+</head>
+<body id="ucdb2html_detail" onload="showLast()">
+  <h1><span class="strip">Questa</span> Branch Coverage Report</h1>
+  <h3>Scope: /<a href="z000005.htm">work.Read_Write_Control_RTL</a></h3>
+  <!-- use script block so buttons vanish when JavaScript is disabled -->
+  <script type="text/javascript">
+  <!--
+  document.write(
+    '<table class="buttons" cellspacing="2" cellpadding="2"><tr>' +
+       '<td id="showAll" width="100" onclick="showAll()" class="button_on" ' +
+           'title="Display all coverage scopes and bins.">Show All</td>' +
+       '<td id="showCov" width="100" onclick="showCov()" class="button_off" ' +
+           'title="Display only covered scopes and bins.">Show Covered</td>' +
+       '<td id="showMis" width="100" onclick="showMis()" class="button_off" ' +
+           'title="Display only uncovered scopes and bins.">Show Missing</td>' +
+    '</tr></table>');
+  //-->
+  </script>
+  <div><a name="cvg246"/><hr/><table>
+  <tr l="101" lnk="__HDL_srcfile_3.htm#101" z="		case (cur_state)" c="Y" p="75.00"/><tr/>
+  <tr cr="c" t="T" l="102" lnk="__HDL_srcfile_3.htm#102" z="			IDLE: begin " h="8620" c="g"/>
+  <tr cr="c" t="T" l="109" lnk="__HDL_srcfile_3.htm#109" z="			SETUP: begin" h="2155" c="g"/>
+  <tr cr="c" t="T" l="116" lnk="__HDL_srcfile_3.htm#116" z="			ACCESS: begin" h="2154" c="g"/>
+  <tr cr="m" t="T" l="119" lnk="__HDL_srcfile_3.htm#119" z="			default: begin" h="0" c="r"/>
+  </table>
+  </div><div class="covered"><a name="cvg247"/><hr/><table>
+  <tr l="103" lnk="__HDL_srcfile_3.htm#103" z="				if (PSEL &amp; ~PENABLE) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="103" lnk="__HDL_srcfile_3.htm#103" z="				if (PSEL &amp; ~PENABLE) begin" h="2155" c="g"/>
+  <tr cr="c" t="E" l="105" lnk="__HDL_srcfile_3.htm#105" z="				end else begin" h="6465" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg248"/><hr/><table>
+  <tr l="110" lnk="__HDL_srcfile_3.htm#110" z="				if (PSEL &amp; PENABLE) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="110" lnk="__HDL_srcfile_3.htm#110" z="				if (PSEL &amp; PENABLE) begin" h="2154" c="g"/>
+  <tr cr="c" t="E" l="112" lnk="__HDL_srcfile_3.htm#112" z="				end else begin" h="1" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg249"/><hr/><table>
+  <tr l="127" lnk="__HDL_srcfile_3.htm#127" z="		if (~PRESETn) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="127" lnk="__HDL_srcfile_3.htm#127" z="		if (~PRESETn) begin" h="41" c="g"/>
+  <tr cr="c" t="E" l="129" lnk="__HDL_srcfile_3.htm#129" z="		end else begin" h="28134" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg250"/><hr/><table>
+  <tr l="136" lnk="__HDL_srcfile_3.htm#136" z="		if(~PRESETn) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="136" lnk="__HDL_srcfile_3.htm#136" z="		if(~PRESETn) begin" h="39" c="g"/>
+  <tr cr="c" t="T" l="142" lnk="__HDL_srcfile_3.htm#142" z="			if ((cur_state == ACCESS) &amp; PWRITE &amp; PSEL &amp; PENABLE) begin" h="1357" c="g"/>
+  <tr cr="c" t="T" l="152" lnk="__HDL_srcfile_3.htm#152" z="			else if ((cur_state == ACCESS) &amp; !PWRITE &amp; PSEL &amp; PENABLE) b..." h="797" c="g"/>
+  <tr cr="c" t="E" l="160" lnk="__HDL_srcfile_3.htm#160" z="			else begin" h="8654" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg251"/><hr/><table>
+  <tr l="143" lnk="__HDL_srcfile_3.htm#143" z="				TDR &lt;= (PADDR == 8'h00) ? PWDATA : TDR;" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="143" lnk="__HDL_srcfile_3.htm#143" z="				TDR &lt;= (PADDR == 8'h00) ? PWDATA : TDR;" h="280" c="g"/>
+  <tr cr="c" t="E" l="143" lnk="__HDL_srcfile_3.htm#143" z="				TDR &lt;= (PADDR == 8'h00) ? PWDATA : TDR;" h="1077" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg252"/><hr/><table>
+  <tr l="144" lnk="__HDL_srcfile_3.htm#144" z="				TCR &lt;= (PADDR == 8'h01) ? PWDATA : TCR;" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="144" lnk="__HDL_srcfile_3.htm#144" z="				TCR &lt;= (PADDR == 8'h01) ? PWDATA : TCR;" h="312" c="g"/>
+  <tr cr="c" t="E" l="144" lnk="__HDL_srcfile_3.htm#144" z="				TCR &lt;= (PADDR == 8'h01) ? PWDATA : TCR;" h="1045" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg253"/><hr/><table>
+  <tr l="145" lnk="__HDL_srcfile_3.htm#145" z="				if((PADDR == 8'h02) &amp;&amp; (TSR != 8'h00)) begin	// Not allow W..." c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="145" lnk="__HDL_srcfile_3.htm#145" z="				if((PADDR == 8'h02) &amp;&amp; (TSR != 8'h00)) begin	// Not allow W..." h="1" c="g"/>
+  <tr cr="c" t="E" l="147" lnk="__HDL_srcfile_3.htm#147" z="				end else begin" h="1356" c="g"/>
+  </table>
+  </div><div><a name="cvg254"/><hr/><table>
+  <tr l="153" lnk="__HDL_srcfile_3.htm#153" z="				case (PADDR)" c="Y" p="75.00"/><tr/>
+  <tr cr="c" t="T" l="154" lnk="__HDL_srcfile_3.htm#154" z="					8'h00: PRDATA &lt;= TDR;" h="263" c="g"/>
+  <tr cr="c" t="T" l="155" lnk="__HDL_srcfile_3.htm#155" z="					8'h01: PRDATA &lt;= TCR;" h="271" c="g"/>
+  <tr cr="c" t="T" l="156" lnk="__HDL_srcfile_3.htm#156" z="					8'h02: PRDATA &lt;= TSR;" h="263" c="g"/>
+  <tr cr="m" t="A" l="153" lnk="__HDL_srcfile_3.htm#153" z="				case (PADDR)" h="0" c="r"/>
+  </table>
+  </div><div class="covered"><a name="cvg255"/><hr/><table>
+  <tr l="170" lnk="__HDL_srcfile_3.htm#170" z="		if (!PRESETn) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="170" lnk="__HDL_srcfile_3.htm#170" z="		if (!PRESETn) begin" h="21" c="g"/>
+  <tr cr="c" t="E" l="175" lnk="__HDL_srcfile_3.htm#175" z="		else begin" h="9737" c="g"/>
+  </table>
+  </div><script type="text/javascript" src="../scripts/buildbranchpage.js"></script>
+  <!-- make sure jumps to last few line nos work -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+</body>
+</html>

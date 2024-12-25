@@ -1,0 +1,6 @@
+Clock_gen.v
+Control_Logic_RTL.v
+Read_Write_Control_RTL.v
+TCNT_RTL.v
+Timer_RTL.v
+Timer_TB.v
