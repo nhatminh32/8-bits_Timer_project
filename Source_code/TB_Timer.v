@@ -120,6 +120,38 @@ module Timer_Testbench(
 		end
 	endtask
 
+	task APB_WRITE_2;
+		input [7:0] addr;
+		input [7:0] data_in;
+
+		begin
+			PADDR	= 0;
+			PWDATA	= 0;
+			PSEL	= 0;
+			PENABLE = 0;
+			PWRITE  = 0;
+			@(posedge PCLK_reg); // Setup phase
+			PWRITE	= 1;
+			PSEL	= 1;
+			PADDR	= addr;
+			PWDATA	= data_in;
+			@(posedge PCLK_reg); // Access phase
+			PENABLE = 1;
+			wait (PREADY);
+			PSEL	= 0;
+			PENABLE = 0;
+			@(posedge PCLK_reg);
+			PSEL	= 0;
+			PENABLE	= 0;
+			PWRITE	= 0;
+			if (PSLVERR) begin
+				$display ("[%0t ns] - [FAILED] Write 8'h%h to address 8'h%h.",$time, data_in, addr);
+			end else begin
+				$display ("[%0t ns] - [SUCCESS] Write 8'h%h to address 8'h%h.",$time, data_in, addr);
+			end
+		end
+	endtask
+
 	/* APB Read transaction simulate task */
 	task APB_READ;
 		input  [7:0] addr;
@@ -215,6 +247,7 @@ module Timer_Testbench(
 		RST_reg = 0;
 		#20
 		RST_reg = 1;
+		APB_WRITE_2(8'h00, 8'hFF);
 		
 		`ifdef tdr_test
 			$display("###### (TEST 01: TDR register test) ######");
@@ -953,6 +986,7 @@ module Timer_Testbench(
 		`endif
 		//APB_WRITE(8'h02, read_data);
 		PSEL_PENABLE_appear(8'h00, 8'hEE);
+
 		$stop;
 		
 	end

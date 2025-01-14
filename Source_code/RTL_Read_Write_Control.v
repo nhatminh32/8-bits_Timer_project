@@ -17,31 +17,31 @@ module TSR_module (
 	always @(*) begin
 		/* pre_out_signal value assignment if either Overflow or Underflow flag is on AND there are no APB write transaction  */
 		if((APB_IN == 8'h00)&&(CL_IN == 2'b01)) begin
-			pre_out_signal <= out_signal;
+			pre_out_signal = out_signal;
 		end else if ((APB_IN == 8'h00)&&(CL_IN == 2'b10)) begin
-			pre_out_signal <= out_signal;
+			pre_out_signal = out_signal;
 		end else begin
 			pre_out_signal = 2'b00;
 		end
 
 		/* Set value for TSR register base on the out_signal */
 		case (out_signal)
-			2'b00:	TSR <= 8'h00;	// Default 
-			2'b01:	TSR <= 8'h01;	// Overflow
-			2'b10:	TSR <= 8'h02;	// Underflow
-			2'b11:	TSR <= 8'h03;	// Overflow and Underflow 
+			2'b00:	TSR = 8'h00;	// Default 
+			2'b01:	TSR = 8'h01;	// Overflow
+			2'b10:	TSR = 8'h02;	// Underflow
+			2'b11:	TSR = 8'h03;	// Overflow and Underflow 
 		endcase
 
 		/* Send reset signal to OVF or UNDF register in the Comparison block of TCNT if TSR bit is set to 0 */
 		if((APB_IN == 8'h01) || (APB_IN == 8'h02)) begin
 			if(out_signal[0] == 1'b0)
-				OVF_RESET_SIGNAL 	<= 1'b1;
+				OVF_RESET_SIGNAL 	= 1'b1;
 			else if (out_signal[1] == 1'b0)
-				UNDF_RESET_SIGNAL 	<= 1'b1;
+				UNDF_RESET_SIGNAL 	= 1'b1;
 		end
 		if (APB_IN == 8'h03) begin
-			OVF_RESET_SIGNAL 	<= 1'b1;
-			UNDF_RESET_SIGNAL 	<= 1'b1;
+			OVF_RESET_SIGNAL 	= 1'b1;
+			UNDF_RESET_SIGNAL 	= 1'b1;
 		end
 
 		/* Reset TSR register value and both register Overflow and Underflow in TCNT if there is a PRESETn signal */
